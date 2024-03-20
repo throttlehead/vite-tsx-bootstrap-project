@@ -1,0 +1,23 @@
+name: initialize
+
+on:
+  workflow_call:
+    outputs:
+      commit_hash:
+        description: "Commit hash to be used in subsequent workflows"
+        value: ${{ jobs.runner-info.outputs.commit_hash }}
+
+jobs:
+  get-info:
+    runs-on: ubuntu-latest
+
+    outputs:
+      commit_hash: ${{ steps.runner-info.outputs.commit_hash }}
+
+    steps:
+      - name: Get info
+        id: get-info
+        run: |
+          echo "Workspace dir: ${{ github.workspace }}"
+          echo "User: $(id -u -n) $(id -u):$(id -g)"
+          echo "commit_hash=$(echo ${{ github.sha }} | cut -c 1-7)" >> "$GITHUB_OUTPUT"

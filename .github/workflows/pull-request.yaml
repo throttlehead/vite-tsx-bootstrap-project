@@ -1,0 +1,27 @@
+name: pull-request
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  initialize:
+    uses: ./.github/workflows/_initialize.yaml
+
+  lint:
+    needs: [initialize]
+    uses: ./.github/workflows/_lint.yaml
+    with:
+      commit_hash: ${{ needs.initialize.outputs.commit_hash }}
+
+  build:
+    needs: [initialize, lint]
+    uses: ./.github/workflows/_build.yaml
+    with:
+      commit_hash: ${{ needs.initialize.outputs.commit_hash }}
+
