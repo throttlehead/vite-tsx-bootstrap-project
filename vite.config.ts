@@ -37,7 +37,6 @@ export default defineConfig({
       '@interfaces': path.resolve(__dirname, './lib/interfaces'),
       '@contexts': path.resolve(__dirname, './lib/contexts'),
       '@apps': path.resolve(__dirname, './lib/apps'),
-      '@utils': path.resolve(__dirname, './lib/utils'),
       '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap')
     }
   },
