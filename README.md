@@ -5,7 +5,7 @@ A React + Typescript component library for completing behavioral-assessments
 
 ## Development
 
-Install dependencies
+Install dependencies:
 
 ```
 npm i
@@ -17,8 +17,15 @@ Build:
 npm run build
 ```
 
-Components can be previewed by running the Vite development server:
+Run dev server:
 
 ```
 npm run dev
+```
+
+Lint:
+
+```
+npm run lint-tsx
+npm run lint-scss
 ```
