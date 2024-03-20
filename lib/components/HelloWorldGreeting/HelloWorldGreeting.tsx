@@ -1,4 +1,5 @@
 import React from "react";
+import HelloWorldGreetingProps from "@interfaces/HelloWorldGreetingProps";
 import "./HelloWorldGreeting.scss";
 
 const HelloWorldGreeting: React.FC<HelloWorldGreetingProps> = (props) => {
