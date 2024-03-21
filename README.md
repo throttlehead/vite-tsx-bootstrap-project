@@ -1,6 +1,6 @@
 # react-behavioral-assessments
 
-A Vite + React + Typescript component library base project
+A Vite + React + Typescript + Bootstrap base project.
 
 
 ## Development
