@@ -1,6 +1,6 @@
 # react-behavioral-assessments
 
-A React + Typescript component library for completing behavioral-assessments
+A Vite + React + Typescript component library base project
 
 
 ## Development
